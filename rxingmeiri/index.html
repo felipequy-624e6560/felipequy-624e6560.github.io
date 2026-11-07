@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>r星每日大赛寸止挑战-赛制玩法解析与每日赛程_参赛技巧与排行观察</title>
+<meta name="description" content="r星每日大赛寸止挑战专题页，汇总每日赛程、挑战规则、玩法解析与参赛技巧，包含选手表现观察、热门挑战观察、常见问题与玩家评论，帮助新老玩家快速了解r星每日大赛寸止挑战的内容节奏与参与方式。">
+<meta name="keywords" content="r星每日大赛寸止挑战,r星每日大赛,寸止挑战规则,每日大赛赛程,寸止挑战玩法">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1724'/%3E%3Cpath d='M18 44V20h10a8 8 0 0 1 0 16h-4v8z' fill='%23ffb347'/%3E%3Ccircle cx='44' cy='40' r='6' fill='%2357d9ff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --rs-bg:#f6f4ee;
+  --rs-panel:#ffffff;
+  --rs-ink:#1d2430;
+  --rs-sub:#5c6575;
+  --rs-line:#e4dfd3;
+  --rs-main:#c2410c;
+  --rs-main-soft:#fdece3;
+  --rs-gold:#b98a2f;
+  --rs-dark:#131a26;
+  --rs-blue:#1f6f8b;
+  --rs-radius:16px;
+  --rs-shadow:0 6px 20px rgba(29,36,48,.07);
+  --rs-shadow-h:0 12px 30px rgba(29,36,48,.13);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--rs-bg);color:var(--rs-ink);line-height:1.75;
+  font-size:16px;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{line-height:1.35;letter-spacing:.2px}
+h2{font-size:26px;margin-bottom:6px}
+h3{font-size:19px}
+.sec{padding:52px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head .sub{color:var(--rs-sub);font-size:14px;margin-top:6px}
+.sec-tag{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--rs-main);font-weight:700;margin-bottom:8px}
+.more-link{font-size:14px;color:var(--rs-main);font-weight:600;border-bottom:1px dashed rgba(194,65,12,.4);padding-bottom:2px}
+
+/* 顶部导航 */
+.rs-nav{position:sticky;top:0;z-index:50;background:rgba(246,244,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--rs-line)}
+.rs-nav .wrap{display:flex;align-items:center;gap:22px;height:66px}
+.rs-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;white-space:nowrap}
+.rs-logo .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,#1d2430,#3b4658);color:#ffb347;display:grid;place-items:center;font-size:15px;font-weight:900;letter-spacing:0}
+.rs-logo span.txt{color:var(--rs-ink)}
+.rs-logo span.txt em{font-style:normal;color:var(--rs-main)}
+.rs-menu{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.rs-menu a{font-size:14px;color:var(--rs-sub);padding:7px 11px;border-radius:9px;transition:.2s}
+.rs-menu a:hover{background:var(--rs-main-soft);color:var(--rs-main)}
+.nav-cta{background:var(--rs-dark);color:#fff;font-size:14px;padding:9px 18px;border-radius:10px;font-weight:600;white-space:nowrap}
+.nav-cta:hover{background:var(--rs-main)}
+
+/* Banner */
+.rs-hero{background:
+  radial-gradient(900px 380px at 88% -10%,rgba(194,65,12,.14),transparent 60%),
+  radial-gradient(700px 320px at 6% 0%,rgba(31,111,139,.13),transparent 60%),
+  linear-gradient(180deg,#fffdf8,#f6f4ee);
+  border-bottom:1px solid var(--rs-line);padding:56px 0 50px}
+.hero-box{display:grid;grid-template-columns:1.35fr .9fr;gap:44px;align-items:center}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--rs-line);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--rs-sub);box-shadow:var(--rs-shadow);margin-bottom:18px}
+.hero-kicker i{width:8px;height:8px;border-radius:50%;background:var(--rs-main);display:inline-block}
+.rs-hero h1{font-size:38px;font-weight:900;letter-spacing:.5px}
+.rs-hero h1 em{font-style:normal;color:var(--rs-main);background:linear-gradient(180deg,transparent 66%,rgba(194,65,12,.2) 66%)}
+.hero-desc{margin-top:16px;color:var(--rs-sub);font-size:16px;max-width:640px}
+.hero-desc p+p{margin-top:6px}
+.hero-search{margin-top:24px;display:flex;gap:10px;background:#fff;border:1px solid var(--rs-line);border-radius:14px;padding:8px;box-shadow:var(--rs-shadow);max-width:560px}
+.hero-search input{flex:1;border:0;outline:0;font-size:15px;padding:8px 12px;background:transparent;color:var(--rs-ink)}
+.hero-search button{border:0;cursor:pointer;background:var(--rs-main);color:#fff;font-size:15px;font-weight:700;padding:10px 22px;border-radius:10px;font-family:inherit}
+.hero-tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+.hero-tags a{font-size:13px;color:var(--rs-blue);background:#fff;border:1px solid var(--rs-line);border-radius:999px;padding:5px 13px;transition:.2s}
+.hero-tags a:hover{color:#fff;background:var(--rs-blue);border-color:var(--rs-blue)}
+.hero-side{display:grid;gap:14px}
+.side-card{background:#fff;border:1px solid var(--rs-line);border-radius:var(--rs-radius);padding:18px;box-shadow:var(--rs-shadow)}
+.side-card h4{font-size:14px;color:var(--rs-sub);font-weight:600;margin-bottom:12px;letter-spacing:1px}
+.side-row{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:8px 0;border-bottom:1px dashed var(--rs-line)}
+.side-row:last-child{border-bottom:0;padding-bottom:0}
+.side-row b{font-weight:700}
+.side-row .dot{font-size:12px;color:var(--rs-main);background:var(--rs-main-soft);border-radius:6px;padding:2px 8px}
+.side-bars{display:grid;gap:10px}
+.bar-line{font-size:13px;color:var(--rs-sub)}
+.bar-line span{display:flex;justify-content:space-between;margin-bottom:4px}
+.bar-track{height:7px;border-radius:99px;background:#efece4;overflow:hidden}
+.bar-track i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--rs-main),#ffb347)}
+
+/* 快捷分类 */
+.quick-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.quick-item{background:#fff;border:1px solid var(--rs-line);border-radius:14px;padding:16px 10px;text-align:center;transition:.22s;box-shadow:var(--rs-shadow)}
+.quick-item:hover{transform:translateY(-4px);box-shadow:var(--rs-shadow-h);border-color:#f0c7b1}
+.quick-item .qi{font-size:20px;display:block;margin-bottom:6px}
+.quick-item b{font-size:14px;display:block}
+.quick-item small{font-size:12px;color:var(--rs-sub)}
+
+/* 通用卡片 */
+.card{background:var(--rs-panel);border:1px solid var(--rs-line);border-radius:var(--rs-radius);box-shadow:var(--rs-shadow);transition:.24s;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:var(--rs-shadow-h)}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:6px;background:#f0ede5;color:var(--rs-sub);margin-right:6px;margin-bottom:4px}
+.tag.hot{background:var(--rs-main-soft);color:var(--rs-main);font-weight:600}
+.tag.blue{background:#e6f1f5;color:var(--rs-blue)}
+
+/* 热门推荐 */
+.hot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.p-card{padding:0;display:flex;flex-direction:column}
+.p-cover{height:132px;display:flex;align-items:flex-end;padding:14px;position:relative;color:#fff}
+.p-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45))}
+.p-cover b{position:relative;z-index:2;font-size:15px;font-weight:700;letter-spacing:.5px}
+.p-cover .rank{position:absolute;top:12px;left:12px;z-index:2;background:rgba(255,255,255,.92);color:var(--rs-main);font-size:12px;font-weight:800;border-radius:7px;padding:2px 9px}
+.p-body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.p-body h3{font-size:16px}
+.p-body p{font-size:13.5px;color:var(--rs-sub);flex:1}
+.p-meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--rs-sub);border-top:1px dashed var(--rs-line);padding-top:10px}
+.p-meta b{color:var(--rs-main);font-weight:700}
+.cv1{background:linear-gradient(135deg,#2a3446,#556b8c)}
+.cv2{background:linear-gradient(135deg,#8a3d1f,#d97706)}
+.cv3{background:linear-gradient(135deg,#1f5f6b,#3aa7b8)}
+.cv4{background:linear-gradient(135deg,#3b2d55,#7a5fa3)}
+.cv5{background:linear-gradient(135deg,#4a2b2b,#a15a3e)}
+.cv6{background:linear-gradient(135deg,#223a2e,#4f8a6a)}
+
+/* 最新更新列表 */
+.upd-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.upd-item{background:#fff;border:1px solid var(--rs-line);border-radius:12px;padding:14px 16px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
+.upd-item:hover{border-color:#f0c7b1;box-shadow:var(--rs-shadow)}
+.upd-time{font-size:12px;color:var(--rs-main);font-weight:700;min-width:56px;padding-top:2px}
+.upd-main b{font-size:14.5px;display:block;margin-bottom:3px}
+.upd-main span{font-size:13px;color:var(--rs-sub)}
+
+/* 深度解析正文 */
+.article-card{background:#fff;border:1px solid var(--rs-line);border-radius:var(--rs-radius);padding:34px 38px;box-shadow:var(--rs-shadow)}
+.article-card h3{font-size:20px;margin:26px 0 10px;padding-left:12px;border-left:4px solid var(--rs-main)}
+.article-card h3:first-child{margin-top:0}
+.article-card p{font-size:15.5px;color:#39424f;margin-bottom:12px;text-align:justify}
+.article-card p strong{color:var(--rs-main)}
+.article-tip{margin-top:20px;background:#fbf8f1;border:1px dashed #e6d8bd;border-radius:12px;padding:16px 18px;font-size:14px;color:#6a5a3c}
+
+/* 分类索引 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat-item{background:#fff;border:1px solid var(--rs-line);border-radius:14px;padding:18px;transition:.22s}
+.cat-item:hover{transform:translateY(-4px);box-shadow:var(--rs-shadow-h)}
+.cat-item b{display:block;font-size:15px;margin-bottom:6px;color:var(--rs-ink)}
+.cat-item span{font-size:13px;color:var(--rs-sub);display:block}
+.cat-item i{display:inline-block;margin-top:10px;font-style:normal;font-size:12px;color:var(--rs-main);font-weight:700}
+
+/* 数据看板 */
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat-box{background:linear-gradient(160deg,#fff,#faf7f0);border:1px solid var(--rs-line);border-radius:14px;padding:20px;text-align:center;box-shadow:var(--rs-shadow)}
+.stat-box b{display:block;font-size:28px;color:var(--rs-main);font-weight:900;letter-spacing:-.5px}
+.stat-box span{font-size:13px;color:var(--rs-sub)}
+
+/* 体验指南 */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.guide-item{background:#fff;border:1px solid var(--rs-line);border-radius:14px;padding:22px;box-shadow:var(--rs-shadow)}
+.guide-item .num{width:34px;height:34px;border-radius:9px;background:var(--rs-dark);color:#ffb347;display:grid;place-items:center;font-weight:800;margin-bottom:12px}
+.guide-item b{display:block;font-size:15.5px;margin-bottom:6px}
+.guide-item p{font-size:14px;color:var(--rs-sub)}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.faq-item{background:#fff;border:1px solid var(--rs-line);border-radius:12px;padding:0;overflow:hidden}
+.faq-item summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:700;font-size:15px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--rs-main);font-size:20px;font-weight:400;line-height:1}
+.faq-item[open] summary::after{content:"−"}
+.faq-item[open] summary{background:#fbf8f1;border-bottom:1px solid var(--rs-line)}
+.faq-item .ans{padding:14px 18px 18px;font-size:14.5px;color:var(--rs-sub)}
+
+/* 评论 */
+.cmt-head{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.cmt-head span{font-size:13px;background:#fff;border:1px solid var(--rs-line);border-radius:999px;padding:5px 14px;color:var(--rs-sub)}
+.cmt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.cmt{background:#fff;border:1px solid var(--rs-line);border-radius:12px;padding:16px;display:flex;gap:12px}
+.avatar{width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-weight:800;font-size:14px}
+.cmt-body b{font-size:14px;display:flex;gap:8px;align-items:center}
+.cmt-body b small{font-weight:400;color:var(--rs-sub);font-size:12px}
+.cmt-body p{font-size:14px;color:#39424f;margin-top:5px}
+.cmt-body .likes{margin-top:7px;font-size:12px;color:var(--rs-sub)}
+.av1{background:#c2410c}.av2{background:#1f6f8b}.av3{background:#7a5fa3}.av4{background:#4f8a6a}
+.av5{background:#a15a3e}.av6{background:#2a3446}.av7{background:#b98a2f}.av8{background:#3aa7b8}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.news-item{background:#fff;border:1px solid var(--rs-line);border-radius:14px;padding:20px;box-shadow:var(--rs-shadow);transition:.22s}
+.news-item:hover{transform:translateY(-4px);box-shadow:var(--rs-shadow-h)}
+.news-item .date{font-size:12.5px;color:var(--rs-main);font-weight:700;letter-spacing:.5px}
+.news-item h3{font-size:16px;margin:8px 0 8px}
+.news-item p{font-size:13.5px;color:var(--rs-sub)}
+
+/* 订阅 */
+.subscribe-box{background:linear-gradient(135deg,#131a26,#2a3446);border-radius:20px;padding:40px;color:#fff;display:flex;justify-content:space-between;gap:26px;align-items:center;flex-wrap:wrap}
+.subscribe-box h2{color:#fff;font-size:24px}
+.subscribe-box p{color:#b7c0ce;font-size:14.5px;margin-top:8px;max-width:520px}
+.sub-form{display:flex;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px;border-radius:12px}
+.sub-form input{border:0;background:transparent;color:#fff;outline:0;padding:9px 14px;font-size:14px;min-width:210px}
+.sub-form input::placeholder{color:#8f9aab}
+.sub-form button{border:0;background:#ffb347;color:#131a26;font-weight:800;padding:10px 20px;border-radius:9px;cursor:pointer;font-family:inherit}
+
+/* 页脚 */
+.rs-foot{background:#10161f;color:#8d97a6;padding:48px 0 26px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.foot-grid h4{color:#fff;font-size:15px;margin-bottom:12px}
+.foot-grid a{display:block;color:#8d97a6;padding:3px 0;transition:.2s}
+.foot-grid a:hover{color:#ffb347}
+.foot-note{border-top:1px solid #232c39;margin-top:32px;padding-top:20px;font-size:13px;line-height:1.9;color:#6d7787}
+.foot-logo{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff;font-size:17px;margin-bottom:12px}
+.foot-logo .mark{width:34px;height:34px;border-radius:10px;background:#1d2430;color:#ffb347;display:grid;place-items:center;font-size:15px;font-weight:900}
+
+@media(max-width:1024px){
+  .hot-grid{grid-template-columns:repeat(2,1fr)}
+  .quick-grid{grid-template-columns:repeat(4,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:repeat(2,1fr)}
+  .guide-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-box{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .rs-hero h1{font-size:27px}
+  .sec{padding:36px 0}
+  .hot-grid,.upd-list,.cat-grid,.news-grid,.guide-grid,.faq-wrap,.cmt-grid{grid-template-columns:1fr}
+  .quick-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .article-card{padding:22px 18px}
+  .rs-menu{display:none}
+  .subscribe-box{padding:26px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-search{flex-direction:column}
+  .hero-search button{width:100%}
+  .sec-head{align-items:flex-start}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="rs-nav">
+  <div class="wrap">
+    <a class="rs-logo" href="/#rs-home">
+      <span class="mark">R</span>
+      <span class="txt">r星<em>寸止</em>档案站</span>
+    </a>
+    <nav class="rs-menu">
+      <a href="/#rs-home">首页</a>
+      <a href="/#rs-hot">热门挑战</a>
+      <a href="/#rs-update">每日赛程</a>
+      <a href="/#rs-analysis">玩法解析</a>
+      <a href="/#rs-category">分类索引</a>
+      <a href="/#rs-guide">参赛指南</a>
+      <a href="/#rs-faq">常见问题</a>
+      <a href="/#rs-comment">玩家评论</a>
+      <a href="/#rs-news">赛事资讯</a>
+    </nav>
+    <a class="nav-cta" href="/#rs-subscribe">订阅赛程提醒</a>
+  </div>
+</header>
+
+<!-- 首屏 Banner -->
+<section class="rs-hero" id="rs-home">
+  <div class="wrap hero-box">
+    <div>
+      <div class="hero-kicker"><i></i>每日更新 · 赛制拆解 · 玩家实况观察</div>
+      <h1>r星每日大赛寸止挑战：<em>每日赛程与玩法全景观察</em></h1>
+      <div class="hero-desc">
+        <p>这里把 r星每日大赛寸止挑战 的每日场次、规则变化、选手表现和社区讨论整理成一份可长期翻阅的专题档案。</p>
+        <p>无论你是刚听说这个挑战的新玩家，还是每天蹲场的老观众，都能从赛程节奏、玩法拆解和评论区风向里找到自己关心的那一块。</p>
+      </div>
+      <form class="hero-search" onsubmit="return false">
+        <input type="search" placeholder="搜索挑战场次、选手昵称、玩法关键词…" aria-label="站内搜索">
+        <button type="submit">搜索赛程</button>
+      </form>
+      <div class="hero-tags">
+        <a href="/#rs-update">今日场次</a>
+        <a href="/#rs-hot">高热度挑战</a>
+        <a href="/#rs-analysis">规则拆解</a>
+        <a href="/#rs-category">进阶难度</a>
+        <a href="/#rs-guide">新手入口</a>
+        <a href="/#rs-comment">玩家讨论</a>
+        <a href="/#rs-news">赛制动态</a>
+        <a href="/#rs-faq">答疑专区</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="side-card">
+        <h4>今日关键数据 · 11月7日</h4>
+        <div class="side-row"><span>开放场次</span><b>12 场</b></div>
+        <div class="side-row"><span>挑战主题</span><b>节奏控制 / 稳定性</b></div>
+        <div class="side-row"><span>平均通关率</span><b>41.6%</b></div>
+        <div class="side-row"><span>状态</span><span class="dot">正在更新</span></div>
+      </div>
+      <div class="side-card">
+        <h4>近期难度分布</h4>
+        <div class="side-bars">
+          <div class="bar-line"><span><em>入门档</em><b>32%</b></span><div class="bar-track"><i style="width:32%"></i></div></div>
+          <div class="bar-line"><span><em>进阶档</em><b>45%</b></span><div class="bar-track"><i style="width:45%"></i></div></div>
+          <div class="bar-line"><span><em>极限档</em><b>18%</b></span><div class="bar-track"><i style="width:18%"></i></div></div>
+          <div class="bar-line"><span><em>彩蛋场</em><b>5%</b></span><div class="bar-track"><i style="width:5%"></i></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 快捷分类入口 -->
+<section class="sec" style="padding-top:38px">
+  <div class="wrap">
+    <div class="quick-grid">
+      <a class="quick-item" href="/#rs-category"><span class="qi">01</span><b>入门档</b><small>规则最轻</small></a>
+      <a class="quick-item" href="/#rs-category"><span class="qi">02</span><b>进阶档</b><small>节奏加码</small></a>
+      <a class="quick-item" href="/#rs-category"><span class="qi">03</span><b>极限档</b><small>高难观察</small></a>
+      <a class="quick-item" href="/#rs-category"><span class="qi">04</span><b>彩蛋场</b><small>随机规则</small></a>
+      <a class="quick-item" href="/#rs-hot"><span class="qi">05</span><b>高热度</b><small>讨论最多</small></a>
+      <a class="quick-item" href="/#rs-update"><span class="qi">06</span><b>今日场</b><small>实时更新</small></a>
+      <a class="quick-item" href="/#rs-guide"><span class="qi">07</span><b>参赛技巧</b><small>稳定优先</small></a>
+      <a class="quick-item" href="/#rs-guide"><span class="qi">08</span><b>观战指南</b><small>看什么</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="sec" id="rs-intro">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">CONTENT BRIEF</div>
+        <h2>r星每日大赛寸止挑战是什么，为什么值得长期关注</h2>
+        <div class="sub">一份围绕每日赛程、规则变化与社区反馈整理的专题说明</div>
+      </div>
+    </div>
+    <div class="article-card">
+      <p>r星每日大赛寸止挑战 的核心，是把“每日固定开赛”和“节奏控制型挑战”结合到一起。它不像一次性活动那样打完就散，而是每天按主题开放若干场次，玩家需要在限定条件内完成指定动作或达成稳定表现，场次之间既有延续性，也会在规则细节上做小幅变化。这种设计让参与者每天都能重新评估自己的状态，也让围观者有了持续追看的理由。</p>
+      <p>从内容需求来看，搜索这个词的人大致分三类：第一类是想搞清楚规则和参与方式的新玩家，第二类是每天蹲场、关心赛程和难度的老参与者，第三类则是纯观众，想先看看别人怎么打、社区怎么评价，再决定要不要下场。本页把这三类需求拆开整理，既有基础说明，也有赛制层面的观察记录。</p>
+      <p>适合的受众其实比想象中宽。喜欢节奏感、愿意反复打磨细节的玩家会在这里找到乐趣；习惯看榜单、追每日更新的观众，也能通过赛程列表和评论风向快速进入状态。对于只想浅尝辄止的人，入门档和彩蛋场同样留出了低门槛入口，不必一上来就挑战极限难度。</p>
+      <p>这个页面提供的参考价值主要集中在四点：一是每日场次的整理，二是规则变化的归纳，三是选手与社区表现的观察，四是常见疑问的集中解答。把这些信息放在同一页，能减少反复翻找的时间，也方便收藏后每天回来看一眼。r星每日大赛寸止挑战 本身节奏很快，正因如此，一份相对稳定的档案页才显得有用。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="sec" id="rs-hot">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">HOT PICKS</div>
+        <h2>今日热门挑战场次推荐</h2>
+        <div class="sub">按讨论热度、通关难度与观赏性综合挑选，适合先看再决定是否下场</div>
+      </div>
+      <a class="more-link" href="/#rs-update">查看全部场次</a>
+    </div>
+    <div class="hot-grid">
+      <article class="card p-card">
+        <div class="p-cover cv1"><span class="rank">热度 01</span><b>深夜节奏场</b></div>
+        <div class="p-body">
+          <h3>深夜节奏场 · 稳定连段</h3>
+          <div><span class="tag hot">极限档</span><span class="tag">节奏控制</span><span class="tag blue">高观赏</span></div>
+          <p>连续动作容错极低，前段节奏偏慢、后段突然提速，是今天最容易“前面稳、后面崩”的一场。适合喜欢复盘细节的玩家。</p>
+          <div class="p-meta"><span>参与人数 <b>1,842</b></span><span>通关率 <b>27%</b></span></div>
+        </div>
+      </article>
+      <article class="card p-card">
+        <div class="p-cover cv2"><span class="rank">热度 02</span><b>午后入门场</b></div>
+        <div class="p-body">
+          <h3>午后入门场 · 规则友好</h3>
+          <div><span class="tag hot">入门档</span><span class="tag">低门槛</span><span class="tag blue">新手友好</span></div>
+          <p>规则说明清晰，节奏留有余量，适合第一次接触 r星每日大赛寸止挑战 的玩家用来熟悉流程，也适合下班后随手打一场。</p>
+          <div class="p-meta"><span>参与人数 <b>3,106</b></span><span>通关率 <b>68%</b></span></div>
+        </div>
+      </article>
+      <article class="card p-card">
+        <div class="p-cover cv3"><span class="rank">热度 03</span><b>限时双倍场</b></div>
+        <div class="p-body">
+          <h3>限时双倍场 · 状态拉扯</h3>
+          <div><span class="tag hot">进阶档</span><span class="tag">限时</span><span class="tag blue">波动大</span></div>
+          <p>时间压缩后，很多平时靠熟练度磨过去的细节会暴露出来。今天讨论区里关于这场“该稳还是该冲”的争论最多。</p>
+          <div class="p-meta"><span>参与人数 <b>2,470</b></span><span>通关率 <b>44%</b></span></div>
+        </div>
+      </article>
+      <article class="card p-card">
+        <div class="p-cover cv4"><span class="rank">热度 04</span><b>随机规则场</b></div>
+        <div class="p-body">
+          <h3>随机规则场 · 彩蛋机制</h3>
+          <div><span class="tag hot">彩蛋场</span><span class="tag">随机</span><span class="tag blue">趣味向</span></div>
+          <p>开场才公布附加条件，老玩家也常被打乱节奏。观赏性很强，适合只想看热闹、不急着参加的观众。</p>
+          <div class="p-meta"><span>参与人数 <b>1,235</b></span><span>通关率 <b>36%</b></span></div>
+        </div>
+      </article>
+      <article class="card p-card">
+        <div class="p-cover cv5"><span class="rank">热度 05</span><b>长线耐力场</b></div>
+        <div class="p-body">
+          <h3>长线耐力场 · 后半程决胜</h3>
+          <div><span class="tag hot">进阶档</span><span class="tag">耐力</span><span class="tag blue">复盘价值高</span></div>
+          <p>前段几乎看不出差距，真正的分水岭出现在后半程。适合愿意记录每次失败原因、逐步调整策略的玩家。</p>
+          <div class="p-meta"><span>参与人数 <b>2,058</b></span><span>通关率 <b>39%</b></span></div>
+        </div>
+      </article>
+      <article class="card p-card">
+        <div class="p-cover cv6"><span class="rank">热度 06</span><b>轻量体验场</b></div>
+        <div class="p-body">
+          <h3>轻量体验场 · 十分钟上手</h3>
+          <div><span class="tag hot">入门档</span><span class="tag">短时长</span><span class="tag blue">适合首试</span></div>
+          <p>单场时间短、规则简单，是了解 r星每日大赛寸止挑战 整体节奏的最好入口，也常被拿来当作正式场次前的热身。</p>
+          <div class="p-meta"><span>参与人数 <b>3,890</b></span><span>通关率 <b>72%</b></span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="sec" id="rs-update" style="background:#fbf9f3;border-top:1px solid var(--rs-line);border-bottom:1px solid var(--rs-line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">LIVE UPDATE · 2026.11.07</div>
+        <h2>最新赛程与场次动态</h2>
+        <div class="sub">按更新时间排列，新增场次、规则微调与结果公示都会在这里出现</div>
+      </div>
+      <a class="more-link" href="/#rs-news">赛事资讯</a>
+    </div>
+    <div class="upd-list">
+      <div class="upd-item"><div class="upd-time">11-07 21:40</div><div class="upd-main"><b>深夜节奏场结果公示</b><span>通关率回落至 27%，评论区开始集中复盘后半程提速段。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-07 20:15</div><div class="upd-main"><b>限时双倍场追加一场</b><span>因报名人数超出预期，晚间追加一场同规则场次。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-07 18:32</div><div class="upd-main"><b>随机规则场彩蛋公布</b><span>本场附加条件为节奏反转，老玩家失误率明显上升。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-07 16:08</div><div class="upd-main"><b>入门档规则说明更新</b><span>补充了失败重试与计时口径的说明，新手反馈更清晰。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-07 14:22</div><div class="upd-main"><b>长线耐力场开局</b><span>本场强调后半程稳定性，前段几乎不设淘汰线。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-07 12:05</div><div class="upd-main"><b>轻量体验场热度回升</b><span>午休时段参与人数明显增加，通关率保持七成以上。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-07 10:41</div><div class="upd-main"><b>本周难度分布更新</b><span>进阶档占比提升至 45%，极限档略有回落。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-07 09:18</div><div class="upd-main"><b>今日赛程总览上线</b><span>共 12 场，覆盖入门、进阶、极限与彩蛋四种难度。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-06 22:50</div><div class="upd-main"><b>昨日高难场复盘帖</b><span>社区整理出三段关键失误点，被不少玩家收藏。</span></div></div>
+      <div class="upd-item"><div class="upd-time">11-06 19:36</div><div class="upd-main"><b>选手表现观察更新</b><span>稳定型选手在耐力场优势明显，冲刺型选手更吃彩蛋场。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="sec" id="rs-analysis">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">DEEP DIVE</div>
+        <h2>r星每日大赛寸止挑战玩法深度解析</h2>
+        <div class="sub">从规则结构、节奏体验到人群适配，逐层拆开看</div>
+      </div>
+    </div>
+    <div class="article-card">
+      <h3>一、赛制结构：每日开放、难度分层</h3>
+      <p><strong>r星每日大赛寸止挑战</strong> 最直观的特点是“每日开放 + 难度分层”。入门档负责降低理解成本，进阶档负责拉开差距，极限档和彩蛋场则承担观赏性与话题性。这种分层并不是简单地调高数值，而是通过调整时间窗口、附加条件、容错区间来改变玩家的决策方式。对新手来说，先摸清入门档的完整流程，比一上来硬冲极限档更有意义。</p>
+      <p>每天的场次数量并不固定，通常围绕一个主题展开。例如节奏控制主题下，多场次会共享相似的判定逻辑，但在细节上各有侧重；彩蛋场则更强调随机性，开场后才知道附加条件。理解这种结构，能帮助参与者合理安排精力，而不是每场都全力投入。</p>
+      <h3>二、节奏体验：前半程稳、后半程见真章</h3>
+      <p>从近一个月的场次观察看，r星每日大赛寸止挑战 的节奏设计普遍遵循“前松后紧”的思路。前段留给玩家熟悉状态的时间，后段才逐步收紧判定。很多失败案例并非操作失误，而是前半程用力过猛，导致后半程稳定性下降。这也是为什么评论区经常出现“慢一点反而更快”的经验分享。</p>
+      <p>节奏感强的场次观赏性也更高。观众能明显看到选手状态的变化，甚至能从细微的动作调整里判断出谁更稳。对于喜欢分析过程的观众，这类场次比纯拼速度的内容更耐看。</p>
+      <h3>三、选手表现：稳定型与冲刺型的分野</h3>
+      <p>社区里常把参与者分成两类：稳定型和冲刺型。稳定型选手在长线耐力场和进阶档里优势明显，他们更愿意在前段保留余量；冲刺型选手则在限时场和彩蛋场更容易出彩，因为这类场次容错窗口短，敢冲的人反而能抓住机会。两种风格没有绝对高下，关键在于场次匹配。</p>
+      <p>从数据看，进阶档的通关率长期在四成上下波动，极限档则常低于三成。这个差距并不完全来自难度，也和参与者的心理预期有关。很多人冲极限档时过于紧张，反而丢掉了平时熟悉的节奏。</p>
+      <h3>四、适合人群与同类内容比较</h3>
+      <p>喜欢节奏控制、愿意反复打磨细节的玩家，是 r星每日大赛寸止挑战 最核心的受众。只想轻度体验的人，可以从轻量体验场和入门档切入，不必强求高难场次。相比之下，纯竞速类内容更强调爆发力，而这类挑战更看重过程管理和稳定输出，两者的乐趣点并不相同。</p>
+      <p>如果你平时习惯看榜单、追每日更新，这个专题页的赛程列表和评论风向能帮你快速进入状态；如果你更在意规则本身，深度解析和 FAQ 部分会更适合。搜索这个词的人，多数是想先搞清楚“怎么参与、难不难、值不值得每天花时间”，本文的各个模块正是围绕这些疑问展开。</p>
+      <div class="article-tip">编辑提示：新玩家建议先用入门档跑通一遍完整流程，再根据自身状态选择进阶档。不要被高热度场次的讨论带偏节奏，稳定完成一场比勉强冲高更有参考价值。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类索引 -->
+<section class="sec" id="rs-category" style="background:#fbf9f3;border-top:1px solid var(--rs-line);border-bottom:1px solid var(--rs-line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">CATEGORY</div>
+        <h2>按难度与玩法分类浏览</h2>
+        <div class="sub">不知道自己适合哪一档？先从分类说明里找对应入口</div>
+      </div>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-item" href="/#rs-hot"><b>入门档</b><span>规则最轻，适合熟悉流程与判定口径。</span><i>查看场次 →</i></a>
+      <a class="cat-item" href="/#rs-hot"><b>进阶档</b><span>节奏加码，考察稳定性与临场调整。</span><i>查看场次 →</i></a>
+      <a class="cat-item" href="/#rs-hot"><b>极限档</b><span>高难观察区，容错低、观赏性强。</span><i>查看场次 →</i></a>
+      <a class="cat-item" href="/#rs-hot"><b>彩蛋场</b><span>随机规则，开场才公布附加条件。</span><i>查看场次 →</i></a>
+      <a class="cat-item" href="/#rs-update"><b>今日场次</b><span>按时间排列，实时跟进最新动态。</span><i>查看场次 →</i></a>
+      <a class="cat-item" href="/#rs-guide"><b>参赛技巧</b><span>从节奏分配到失误复盘的经验整理。</span><i>查看场次 →</i></a>
+      <a class="cat-item" href="/#rs-comment"><b>玩家讨论</b><span>评论区里的真实反馈与观点碰撞。</span><i>查看场次 →</i></a>
+      <a class="cat-item" href="/#rs-news"><b>赛事资讯</b><span>规则调整、场次追加与结果公示。</span><i>查看场次 →</i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 数据看板 -->
+<section class="sec" id="rs-data">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">DATA BOARD</div>
+        <h2>近期赛程数据一览</h2>
+        <div class="sub">基于公开场次与社区反馈整理，仅作趋势参考</div>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-box"><b>12</b><span>今日开放场次</span></div>
+      <div class="stat-box"><b>41.6%</b><span>平均通关率</span></div>
+      <div class="stat-box"><b>45%</b><span>进阶档占比</span></div>
+      <div class="stat-box"><b>2.5k</b><span>单场平均参与</span></div>
+      <div class="stat-box"><b>27%</b><span>极限档通关率</span></div>
+      <div class="stat-box"><b>72%</b><span>入门档通关率</span></div>
+      <div class="stat-box"><b>18%</b><span>极限档场次占比</span></div>
+      <div class="stat-box"><b>5%</b><span>彩蛋场占比</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="sec" id="rs-guide" style="background:#fbf9f3;border-top:1px solid var(--rs-line);border-bottom:1px solid var(--rs-line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">GUIDE</div>
+        <h2>参赛与观战体验指南</h2>
+        <div class="sub">页面怎么用、场次怎么看、新手从哪开始</div>
+      </div>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-item"><div class="num">1</div><b>先看今日场次</b><p>赛程列表按时间排列，标明了难度与主题，先确认自己有空参与的时段，再决定看哪几场。</p></div>
+      <div class="guide-item"><div class="num">2</div><b>分类筛选更方便</b><p>入门、进阶、极限、彩蛋四档分开，避免在大量场次里反复翻找，移动端也能快速定位。</p></div>
+      <div class="guide-item"><div class="num">3</div><b>新手从入门档开始</b><p>入门档规则说明完整、节奏留有余量，先跑通一遍流程，再考虑进阶档，心态会稳很多。</p></div>
+      <div class="guide-item"><div class="num">4</div><b>复盘比硬冲有用</b><p>失败后先看自己崩在哪一段，比立刻重开一场更有效率。评论区里常有人分享具体的失误点。</p></div>
+      <div class="guide-item"><div class="num">5</div><b>观战也有门道</b><p>高难场的看点在后半程的状态变化，彩蛋场则看临场反应，选对场次观赏体验差别很大。</p></div>
+      <div class="guide-item"><div class="num">6</div><b>收藏后每天回看</b><p>赛程每天变化，收藏本页能减少重复搜索的时间，也方便对比不同日期的难度分布。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="rs-faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">FAQ</div>
+        <h2>关于 r星每日大赛寸止挑战 的常见问题</h2>
+        <div class="sub">整理自社区高频提问，点击展开查看回答</div>
+      </div>
+    </div>
+    <div class="faq-wrap">
+      <details class="faq-item" open>
+        <summary>r星每日大赛寸止挑战每天都有吗？</summary>
+        <div class="ans">多数情况下每天都会开放场次，但具体数量和主题会有变化。通常入门档和进阶档较为稳定，极限档和彩蛋场视当日安排而定。建议以当天赛程列表为准，不要只按昨天的经验判断今天是否有场次。</div>
+      </details>
+      <details class="faq-item">
+        <summary>第一次参加应该选哪一档？</summary>
+        <div class="ans">优先选入门档或轻量体验场。这两类场次规则说明清晰、时间压力小，适合先熟悉判定口径和整体节奏。等你能稳定完成几场之后，再尝试进阶档，会更容易理解自己在哪些环节容易失误。</div>
+      </details>
+      <details class="faq-item">
+        <summary>极限档和进阶档的主要差别是什么？</summary>
+        <div class="ans">差别主要在容错区间和节奏收紧的时机。进阶档通常前段留有余量，后段逐步加压；极限档则更早进入高要求状态，对稳定性要求更高。观赏性上极限档更刺激，但参与前最好确认自己状态是否适合。</div>
+      </details>
+      <details class="faq-item">
+        <summary>彩蛋场的随机规则会影响公平性吗？</summary>
+        <div class="ans">彩蛋场的定位本来就是趣味与随机，附加条件对所有人同时公布，因此更看重临场反应而非长期积累。如果在意稳定比较，可以选择进阶档或耐力场；如果只是想看热闹，彩蛋场反而是最有话题性的选择。</div>
+      </details>
+      <details class="faq-item">
+        <summary>为什么很多玩家强调“前半程别冲太猛”？</summary>
+        <div class="ans">因为多数场次的判定压力集中在后半段。前半程用力过猛容易导致状态提前消耗，后半程稳定性下降。社区里的经验分享普遍建议保留余量，把注意力放在节奏分配上，而不是一开始就追求极限表现。</div>
+      </details>
+      <details class="faq-item">
+        <summary>这个专题页多久更新一次？</summary>
+        <div class="ans">赛程与场次动态基本按天更新，规则变化和结果公示会随实际情况补充。深度解析和 FAQ 部分更新频率较低，主要在有明显赛制调整时修订。建议收藏本页，结合当日列表一起看。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="sec" id="rs-comment" style="background:#fbf9f3;border-top:1px solid var(--rs-line);border-bottom:1px solid var(--rs-line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">COMMUNITY</div>
+        <h2>玩家评论与讨论风向</h2>
+        <div class="sub">近 30 天社区短评摘录，观点不代表本站立场</div>
+      </div>
+    </div>
+    <div class="cmt-head">
+      <span>追更讨论</span><span>节奏分析</span><span>新手提问</span><span>吐槽混合</span><span>推荐安利</span>
+    </div>
+    <div class="cmt-grid">
+      <div class="cmt"><div class="avatar av1">洛</div><div class="cmt-body"><b>洛水行舟 <small>11-06</small></b><p>今天深夜节奏场后半段是真的狠，前面还觉得挺轻松，一提速直接乱了。准备明天再试一次，先把前半程放慢。</p><div class="likes">赞 42 · 回复 7</div></div></div>
+      <div class="cmt"><div class="avatar av2">阿</div><div class="cmt-body"><b>阿岚不熬夜 <small>11-06</small></b><p>入门档对新手挺友好的，规则写得清楚，第一次打完至少知道自己哪一步出了问题，不会一头雾水。</p><div class="likes">赞 36 · 回复 4</div></div></div>
+      <div class="cmt"><div class="avatar av3">青</div><div class="cmt-body"><b>青柠汽水 <small>11-05</small></b><p>彩蛋场的随机条件有点意思，但连续两场都抽到节奏反转，运气成分确实大，建议别太在意结果。</p><div class="likes">赞 21 · 回复 9</div></div></div>
+      <div class="cmt"><div class="avatar av4">陈</div><div class="cmt-body"><b>陈年旧磁带 <small>11-05</small></b><p>稳定型选手在耐力场真的吃香，我这种喜欢冲的每次后半程都掉链子，得改改习惯了。</p><div class="likes">赞 28 · 回复 5</div></div></div>
+      <div class="cmt"><div class="avatar av5">南</div><div class="cmt-body"><b>南巷有风 <small>11-04</small></b><p>限时双倍场追加的那一场报名太快了，等看到消息已经满了，希望以后能提前一点公示。</p><div class="likes">赞 17 · 回复 12</div></div></div>
+      <div class="cmt"><div class="avatar av6">周</div><div class="cmt-body"><b>周末补觉 <small>11-04</small></b><p>轻量体验场十分钟一场，午休打刚好。虽然简单，但用来保持手感挺不错的。</p><div class="likes">赞 33 · 回复 3</div></div></div>
+      <div class="cmt"><div class="avatar av7">沈</div><div class="cmt-body"><b>沈砚秋 <small>11-03</small></b><p>说实话极限档通关率不到三成，有点劝退。不过看别人打确实好看，我暂时还是当观众。</p><div class="likes">赞 25 · 回复 8</div></div></div>
+      <div class="cmt"><div class="avatar av8">小</div><div class="cmt-body"><b>小满未满 <small>11-03</small></b><p>评论区那个复盘帖很有用，照着调整了前半程的节奏，今天进阶档终于过了。</p><div class="likes">赞 47 · 回复 6</div></div></div>
+      <div class="cmt"><div class="avatar av1">一</div><div class="cmt-body"><b>一只咸鱼 <small>11-02</small></b><p>规则说明更新之后清楚多了，之前一直搞不清重试怎么算，现在至少不会因为理解错规则白打一场。</p><div class="likes">赞 19 · 回复 2</div></div></div>
+      <div class="cmt"><div class="avatar av2">北</div><div class="cmt-body"><b>北岸听潮 <small>11-02</small></b><p>感觉最近进阶档占比高了，难度分布有点往难的方向走，新手可能会有点压力。</p><div class="likes">赞 14 · 回复 10</div></div></div>
+      <div class="cmt"><div class="avatar av3">温</div><div class="cmt-body"><b>温柔半两 <small>11-01</small></b><p>每日大赛寸止挑战最吸引我的就是每天都有新鲜感，虽然规则框架差不多，但细节变化能让人一直保持兴趣。</p><div class="likes">赞 30 · 回复 4</div></div></div>
+      <div class="cmt"><div class="avatar av4">老</div><div class="cmt-body"><b>老树新芽 <small>10-31</small></b><p>作为从早期就开始看的人，感觉现在场次分类更细了，新手不会一上来就懵，这点改进挺好。</p><div class="likes">赞 22 · 回复 3</div></div></div>
+      <div class="cmt"><div class="avatar av5">半</div><div class="cmt-body"><b>半糖去冰 <small>10-30</small></b><p>彩蛋场观赏性拉满，但自己打的时候心态容易崩，适合看完别人打再决定要不要上。</p><div class="likes">赞 18 · 回复 5</div></div></div>
+      <div class="cmt"><div class="avatar av6">路</div><div class="cmt-body"><b>路口有灯 <small>10-29</small></b><p>希望赛程列表能标一下预计时长，有时候只想打一场短的，翻半天才知道哪场合适。</p><div class="likes">赞 12 · 回复 7</div></div></div>
+      <div class="cmt"><div class="avatar av7">拾</div><div class="cmt-body"><b>拾光记事 <small>10-28</small></b><p>耐力场后半程的紧张感是其他场次比不了的，过关那一刻挺有成就感，推荐状态好的时候再试。</p><div class="likes">赞 26 · 回复 4</div></div></div>
+      <div class="cmt"><div class="avatar av8">夏</div><div class="cmt-body"><b>夏夜萤火 <small>10-27</small></b><p>整体节奏不错，就是高难场次集中在晚上，白天想认真打一场选择不多。</p><div class="likes">赞 15 · 回复 6</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="sec" id="rs-news">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">NEWS</div>
+        <h2>赛事资讯与规则动态</h2>
+        <div class="sub">围绕赛程变化、玩法调整与社区反馈的资讯整理</div>
+      </div>
+    </div>
+    <div class="news-grid">
+      <article class="news-item"><div class="date">2026-11-07</div><h3>本周进阶档占比提升，难度分布出现小幅变化</h3><p>近一周进阶档场次占比升至 45%，极限档略有回落。对新手来说选择空间变大，但也需要更注意场次匹配。</p></article>
+      <article class="news-item"><div class="date">2026-11-06</div><h3>随机规则场彩蛋机制补充说明</h3><p>彩蛋场附加条件会在开场时统一公布，避免提前泄露影响体验。社区反馈整体偏向正面，认为趣味性更强。</p></article>
+      <article class="news-item"><div class="date">2026-11-05</div><h3>入门档规则说明优化，重试口径更清晰</h3><p>针对新手集中反馈的问题，入门档补充了失败重试与计时口径的说明，降低了理解成本。</p></article>
+      <article class="news-item"><div class="date">2026-11-04</div><h3>限时双倍场报名火爆，晚间追加一场</h3><p>因报名人数超出预期，主办方在晚间追加同规则场次，缓解了参与压力，也带动了当天讨论热度。</p></article>
+      <article class="news-item"><div class="date">2026-11-02</div><h3>长线耐力场复盘帖走红，稳定型打法受关注</h3><p>社区整理的三段关键失误点被大量收藏，不少玩家开始调整前半程策略，强调保留余量。</p></article>
+      <article class="news-item"><div class="date">2026-10-30</div><h3>每日大赛寸止挑战场次分类进一步细化</h3><p>分类标签更明确，入门、进阶、极限、彩蛋四档区分清晰，移动端浏览体验同步优化。</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="sec" id="rs-subscribe">
+  <div class="wrap">
+    <div class="subscribe-box">
+      <div>
+        <h2>订阅每日赛程提醒</h2>
+        <p>留下邮箱，获取 r星每日大赛寸止挑战 的场次更新、规则变化与高热度场次提示。仅作赛程提醒，不发送无关内容。</p>
+      </div>
+      <form class="sub-form" onsubmit="return false">
+        <input type="email" placeholder="输入你的邮箱地址" aria-label="邮箱">
+        <button type="submit">订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="rs-foot" id="rs-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><span class="mark">R</span>r星寸止档案站</div>
+        <p style="color:#8d97a6;font-size:13.5px;line-height:1.9">专注整理 r星每日大赛寸止挑战 的赛程、规则与社区反馈，为玩家和观众提供一份可长期翻阅的专题档案。</p>
+      </div>
+      <div>
+        <h4>热门栏目</h4>
+        <a href="/#rs-hot">热门挑战</a>
+        <a href="/#rs-update">每日赛程</a>
+        <a href="/#rs-analysis">玩法解析</a>
+        <a href="/#rs-category">分类索引</a>
+      </div>
+      <div>
+        <h4>参与参考</h4>
+        <a href="/#rs-guide">参赛指南</a>
+        <a href="/#rs-faq">常见问题</a>
+        <a href="/#rs-data">数据看板</a>
+        <a href="/#rs-comment">玩家评论</a>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <a href="/#rs-news">赛事资讯</a>
+        <a href="/#rs-subscribe">订阅提醒</a>
+        <a href="/#rs-home">返回首页</a>
+        <a href="/#rs-foot">站点声明</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>© 2026 r星寸止档案站 · 本页内容为社区信息整理与编辑观察，赛程、规则与数据以实际开放情况为准。</p>
+      <p>免责声明：本站为内容整理与信息参考页面，不提供任何形式的参与入口或交易服务；评论内容来自社区观点摘录，不代表本站立场。友情链接为占位展示，具体合作另行沟通。</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+                                                 </html>
