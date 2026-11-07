@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黑料大赛每日大赛入口-每日大赛入口合集_黑料大赛参赛入口与看点解析</title>
+<meta name="description" content="黑料大赛每日大赛入口专题页，汇总每日大赛入口、参赛页面与最新赛况，解析黑料大赛的赛制看点、作品风格、投票逻辑与围观指南，帮你快速找到当日入口并系统了解这项网络话题赛事的来龙去脉。">
+<meta name="keywords" content="黑料大赛每日大赛入口,黑料大赛入口,每日大赛入口,黑料大赛赛制,黑料大赛作品">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1030'/%3E%3Cpath d='M18 44 L32 16 L46 44 Z' fill='none' stroke='%23ff5fa2' stroke-width='4'/%3E%3Ccircle cx='32' cy='38' r='4' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#120a1f;
+  --bg2:#1a1030;
+  --card:#22163c;
+  --card2:#2b1b4a;
+  --line:#3a2758;
+  --txt:#efe7ff;
+  --sub:#b7a6d6;
+  --neon:#ff5fa2;
+  --neon2:#7b6bff;
+  --gold:#ffd166;
+  --green:#5ce1a1;
+  --radius:16px;
+  --shadow:0 8px 26px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:radial-gradient(1200px 600px at 20% -10%,#2a1550 0%,transparent 60%),
+             radial-gradient(900px 500px at 90% 0%,#1d2a5a 0%,transparent 55%),
+             var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:800}
+h2{font-size:23px}
+h3{font-size:17px}
+p{margin:0 0 12px}
+ul{margin:0;padding-left:18px}
+
+/* 顶部导航 */
+.topbar{position:sticky;top:0;z-index:60;backdrop-filter:blur(12px);
+  background:rgba(18,10,31,.78);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:18px;height:64px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px;letter-spacing:.5px;white-space:nowrap}
+.logo .mark{width:30px;height:30px;border-radius:9px;display:inline-block;
+  background:conic-gradient(from 210deg,var(--neon),var(--neon2),var(--gold),var(--neon));
+  box-shadow:0 0 14px rgba(255,95,162,.55)}
+.logo em{font-style:normal;color:var(--neon)}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;overflow:hidden}
+.nav-links a{padding:6px 11px;border-radius:9px;font-size:13.5px;color:var(--sub);transition:.2s}
+.nav-links a:hover{background:var(--card2);color:var(--txt)}
+.nav-cta{margin-left:auto;display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:9px 18px;border-radius:11px;font-size:13.5px;font-weight:700;
+  border:1px solid transparent;transition:.22s;cursor:pointer}
+.btn-pri{background:linear-gradient(135deg,var(--neon),var(--neon2));color:#fff;
+  box-shadow:0 6px 18px rgba(255,95,162,.32)}
+.btn-pri:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,95,162,.42)}
+.btn-ghost{border-color:var(--line);color:var(--sub)}
+.btn-ghost:hover{color:#fff;border-color:var(--neon)}
+
+/* Banner */
+.hero{padding:44px 0 30px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(123,107,255,.28),transparent 65%);pointer-events:none}
+.hero-in{display:grid;grid-template-columns:1.25fr .85fr;gap:34px;align-items:center;position:relative;z-index:2}
+.badge-line{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-size:12px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);
+  color:var(--sub);background:rgba(255,255,255,.03)}
+.badge.hot{color:#ffe9f3;border-color:rgba(255,95,162,.5);background:rgba(255,95,162,.14)}
+.hero h1{font-size:38px;letter-spacing:-.5px;margin-bottom:14px}
+.hero h1 span{background:linear-gradient(100deg,var(--neon),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{color:var(--sub);font-size:15px;margin-bottom:20px;max-width:620px}
+.searchbox{display:flex;gap:8px;background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:7px;max-width:560px;box-shadow:var(--shadow)}
+.searchbox input{flex:1;background:transparent;border:0;outline:0;color:var(--txt);
+  padding:10px 12px;font-size:14px}
+.searchbox input::placeholder{color:#7f6f9e}
+.quick-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.quick-tags a{font-size:12.5px;color:var(--sub);padding:4px 10px;border-radius:8px;
+  background:rgba(255,255,255,.04);border:1px solid transparent;transition:.2s}
+.quick-tags a:hover{color:#fff;border-color:rgba(255,95,162,.5)}
+.hero-side{background:linear-gradient(160deg,var(--card2),var(--card));
+  border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.hero-side h3{font-size:15px;color:var(--gold);margin-bottom:12px;letter-spacing:.5px}
+.entry-row{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.08);font-size:13.5px}
+.entry-row:last-child{border-bottom:0}
+.entry-row span{color:var(--sub)}
+.entry-row b{color:var(--neon);font-weight:700}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);
+  display:inline-block;margin-right:7px;box-shadow:0 0 8px var(--green)}
+
+/* 通用 section */
+section{padding:34px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+  margin-bottom:20px;flex-wrap:wrap}
+.sec-head h2{position:relative;padding-left:14px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:4px;
+  border-radius:4px;background:linear-gradient(180deg,var(--neon),var(--neon2))}
+.sec-head .desc{color:var(--sub);font-size:13px;max-width:560px}
+.more-link{font-size:13px;color:var(--neon);white-space:nowrap}
+.more-link:hover{text-decoration:underline}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-item{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:15px 16px;transition:.22s;display:block}
+.cat-item:hover{transform:translateY(-3px);border-color:rgba(255,95,162,.55);
+  box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.cat-item .ico{font-size:19px;margin-bottom:6px;display:block}
+.cat-item b{display:block;font-size:14.5px;margin-bottom:3px}
+.cat-item small{color:var(--sub);font-size:12px;line-height:1.6;display:block}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.24s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);border-color:rgba(123,107,255,.6);
+  box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.cover{height:118px;position:relative;display:flex;align-items:flex-end;padding:12px}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.55))}
+.cover b{position:relative;z-index:2;font-size:15px;letter-spacing:.3px}
+.c1{background:linear-gradient(135deg,#4b1d63,#a02a72)}
+.c2{background:linear-gradient(135deg,#1f2a6b,#4b8fd6)}
+.c3{background:linear-gradient(135deg,#6b2a1f,#d68a4b)}
+.c4{background:linear-gradient(135deg,#1f6b4b,#4bd6a0)}
+.c5{background:linear-gradient(135deg,#5c1f6b,#d64bc4)}
+.c6{background:linear-gradient(135deg,#2a1f6b,#6b4bd6)}
+.card-body{padding:13px 15px 16px;flex:1;display:flex;flex-direction:column}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tag{font-size:11.5px;padding:2px 8px;border-radius:6px;background:rgba(255,95,162,.14);
+  color:#ffb8d6;border:1px solid rgba(255,95,162,.24)}
+.tag.alt{background:rgba(123,107,255,.16);color:#c0b6ff;border-color:rgba(123,107,255,.3)}
+.card-body p{font-size:13px;color:var(--sub);margin-bottom:10px}
+.meta{margin-top:auto;display:flex;justify-content:space-between;font-size:12px;color:#8f7fb0}
+.meta b{color:var(--gold);font-weight:700}
+
+/* 最新更新列表 */
+.update-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.upd{display:flex;gap:12px;align-items:flex-start;background:var(--card);
+  border:1px solid var(--line);border-radius:12px;padding:13px 15px;transition:.2s}
+.upd:hover{border-color:rgba(92,225,161,.5);transform:translateX(3px)}
+.upd .time{font-size:12px;color:var(--green);white-space:nowrap;font-variant-numeric:tabular-nums;
+  min-width:64px;padding-top:2px}
+.upd b{font-size:14px;display:block;margin-bottom:2px}
+.upd small{color:var(--sub);font-size:12.5px;line-height:1.6;display:block}
+
+/* 深度解析 */
+.article-box{background:linear-gradient(170deg,var(--card),#1b1230);
+  border:1px solid var(--line);border-radius:20px;padding:28px 30px;box-shadow:var(--shadow)}
+.article-box h3{color:var(--gold);margin:22px 0 10px;font-size:16.5px}
+.article-box h3:first-child{margin-top:0}
+.article-box p{color:#d6cbea;font-size:14.5px;line-height:1.9}
+.article-box strong{color:var(--neon)}
+.pull{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 4px}
+.pull div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.pull b{color:var(--neon2);display:block;font-size:13px;margin-bottom:3px}
+.pull small{color:var(--sub);font-size:12.5px;line-height:1.65}
+
+/* 数据看板 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:18px 16px;text-align:center;transition:.22s}
+.stat:hover{border-color:rgba(255,209,102,.45)}
+.stat b{display:block;font-size:26px;font-weight:800;
+  background:linear-gradient(120deg,var(--gold),var(--neon));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.stat small{color:var(--sub);font-size:12.5px}
+
+/* 指南 */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.guide{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.guide .num{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;
+  justify-content:center;font-weight:800;font-size:14px;color:#fff;margin-bottom:10px;
+  background:linear-gradient(135deg,var(--neon2),var(--neon))}
+.guide b{display:block;margin-bottom:6px;font-size:14.5px}
+.guide p{font-size:13px;color:var(--sub);margin:0}
+
+/* FAQ */
+.faq-list{display:grid;gap:10px}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:13px;
+  overflow:hidden;transition:.2s}
+.faq-item[open]{border-color:rgba(255,95,162,.5)}
+.faq-item summary{cursor:pointer;padding:15px 18px;font-weight:700;font-size:14.5px;
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--neon);font-size:20px;font-weight:700;line-height:1}
+.faq-item[open] summary::after{content:"−"}
+.faq-item .ans{padding:0 18px 16px;color:var(--sub);font-size:13.5px;line-height:1.85}
+
+/* 评论 */
+.cmt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 16px}
+.cmt .who{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.avatar{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:12px;font-weight:800;color:#fff;
+  background:linear-gradient(135deg,var(--neon2),var(--neon));flex:none}
+.cmt .who b{font-size:13.5px}
+.cmt .who small{color:#8f7fb0;font-size:11.5px;margin-left:auto}
+.cmt p{font-size:13px;color:#cfc3e8;margin:0;line-height:1.75}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.news{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:16px;transition:.22s;display:flex;flex-direction:column}
+.news:hover{transform:translateY(-3px);border-color:rgba(123,107,255,.6)}
+.news .date{font-size:12px;color:var(--green);margin-bottom:6px}
+.news b{font-size:14.5px;display:block;margin-bottom:6px;line-height:1.5}
+.news p{font-size:12.8px;color:var(--sub);margin:0}
+
+/* 订阅 */
+.subscribe{background:linear-gradient(120deg,rgba(255,95,162,.16),rgba(123,107,255,.16));
+  border:1px solid rgba(255,95,162,.32);border-radius:22px;padding:30px;
+  display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center}
+.subscribe h2{font-size:21px;margin-bottom:8px}
+.subscribe p{color:var(--sub);font-size:13.5px;margin:0}
+.sub-form{display:flex;gap:8px}
+.sub-form input{flex:1;background:rgba(0,0,0,.32);border:1px solid var(--line);
+  border-radius:11px;padding:11px 14px;color:var(--txt);outline:0;font-size:13.5px}
+.sub-form input::placeholder{color:#8a7aa8}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);margin-top:34px;padding:32px 0 26px;
+  background:rgba(0,0,0,.24)}
+.foot-in{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:26px}
+.foot-in h4{font-size:13.5px;margin-bottom:10px;color:var(--gold)}
+.foot-in a,.foot-in p,.foot-in li{font-size:12.5px;color:var(--sub);line-height:1.9}
+.foot-in a:hover{color:var(--neon)}
+.foot-in ul{padding-left:0;list-style:none;margin:0}
+.copy{margin-top:24px;padding-top:16px;border-top:1px dashed rgba(255,255,255,.09);
+  font-size:12px;color:#7c6d99;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media (max-width:980px){
+  .hero-in{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .guide-grid{grid-template-columns:1fr 1fr}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .foot-in{grid-template-columns:1fr 1fr}
+  .subscribe{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav-links{display:none}
+  .hero{padding:28px 0 20px}
+  .hero h1{font-size:25px}
+  .card-grid,.update-list,.cmt-grid,.news-grid,.guide-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .article-box{padding:20px 17px}
+  .pull{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr}
+  .sec-head h2{font-size:19px}
+  .subscribe{padding:22px 18px}
+  .copy{font-size:11.5px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="topbar">
+  <div class="wrap nav-in">
+    <a class="logo" href="/#top"><span class="mark"></span>黑料<em>大赛</em>观察站</a>
+    <nav class="nav-links">
+      <a href="/#daily-entry">每日大赛入口</a>
+      <a href="/#hot-list">热门作品</a>
+      <a href="/#latest">最新赛况</a>
+      <a href="/#analysis">赛制解析</a>
+      <a href="/#guide">围观指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="/#latest">今日更新</a>
+      <a class="btn btn-pri" href="/#daily-entry">进今日入口</a>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 Banner -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <div class="badge-line">
+        <span class="badge hot">2026 赛期进行中</span>
+        <span class="badge">每日 20:00 更新赛况</span>
+        <span class="badge">入口状态实时标注</span>
+      </div>
+      <h1>黑料大赛每日大赛入口 <span>与赛况汇总</span></h1>
+      <p class="lead">
+        每天一条清晰的进入路径：黑料大赛每日大赛入口导航、当日赛题方向、热门参赛内容与围观讨论，全部集中在这一页。
+      </p>
+      <p class="lead">
+        从赛制结构到作品风格，从入口可用性到投票节奏，帮助第一次接触的新人快速上手，也帮老观众省去到处翻找的时间。
+      </p>
+      <form class="searchbox" onsubmit="return false;">
+        <input type="text" placeholder="搜索：今日入口 / 赛题方向 / 热门作品 / 选手名">
+        <button class="btn btn-pri" type="submit">搜索</button>
+      </form>
+      <div class="quick-tags">
+        <a href="/#daily-entry">今日入口</a>
+        <a href="/#hot-list">热门作品</a>
+        <a href="/#latest">最新赛况</a>
+        <a href="/#analysis">赛制解析</a>
+        <a href="/#guide">围观指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h3>今日入口状态速览</h3>
+      <div class="entry-row"><span><i class="dot"></i>主入口</span><b>正常开放</b></div>
+      <div class="entry-row"><span>备用入口</span><b>可切换</b></div>
+      <div class="entry-row"><span>今日赛题方向</span><b>话题型</b></div>
+      <div class="entry-row"><span>作品提交截止</span><b>23:30</b></div>
+      <div class="entry-row"><span>围观讨论热度</span><b>偏高</b></div>
+      <div class="entry-row"><span>建议访问时段</span><b>19:00 后</b></div>
+    </aside>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section id="intro">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>这个页面能帮你解决什么</h2>
+      <p class="desc">不是简单丢一个链接，而是把黑料大赛每日大赛入口背后的赛制逻辑、内容风格和围观方式讲清楚。</p>
+    </div>
+    <div class="article-box">
+      <p>关于<strong>黑料大赛每日大赛入口</strong>，搜索它的人诉求其实很集中：今天从哪里进、进去之后看什么、这些内容大致是什么风格、值不值得花时间。这类话题型赛事的信息往往分散在各个讨论区、群聊截图和转发帖里，入口地址隔一段时间就换，赛题方向每天调整，新观众很容易在第一步就卡住。本页做的第一件事，是把“入口”这件事讲明白——把当日入口、备用入口、开放时段和状态标注集中呈现，减少无效翻找。</p>
+      <p>第二件事是把内容讲清楚。黑料大赛本质上是围绕“话题素材 + 观点表达 + 传播效果”展开的网络内容竞赛，参赛作品通常以短图文、段子化叙述、盘点式整理或对比式评论的形式出现。它并非严肃新闻，也不适合当成事实核查材料，更接近一种带有竞技性质的网络内容玩法。理解这一点，才能判断自己是想围观热闹、研究传播手法，还是只想看看今天有什么新梗。</p>
+      <p>本页适合三类人：一是每天想快速找到<strong>每日大赛入口</strong>的老观众；二是刚听说这个赛事、想弄明白它到底在比什么的新人；三是做内容观察、想研究话题传播路径的读者。页面按“入口—热门—更新—解析—指南—问答—评论—资讯”的顺序组织，你可以只看首屏入口区就走，也可以顺着往下读，把赛制脉络一次补齐。建议收藏本页，赛期内每天回来刷新一次，比在多个渠道来回跳转更省时间。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section id="category">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>按方向逛：八个常用分类</h2>
+      <p class="desc">分类只是浏览路径的划分，方便你按兴趣过滤，不代表内容质量高低。</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-item" href="/#hot-list"><span class="ico">🔥</span><b>今日热门作品</b><small>当日讨论量靠前的内容集中展示</small></a>
+      <a class="cat-item" href="/#latest"><span class="ico">🕗</span><b>赛况实时更新</b><small>赛题方向、提交节点与状态变化</small></a>
+      <a class="cat-item" href="/#analysis"><span class="ico">🧩</span><b>赛制与规则解析</b><small>评分维度、投票逻辑与常见争议</small></a>
+      <a class="cat-item" href="/#hot-list"><span class="ico">✍️</span><b>文本类参赛作品</b><small>段子化叙述、盘点与观点短评</small></a>
+      <a class="cat-item" href="/#hot-list"><span class="ico">🎞️</span><b>图文混排作品</b><small>截图整理、对比图与信息卡片</small></a>
+      <a class="cat-item" href="/#guide"><span class="ico">🧭</span><b>新人围观指南</b><small>从哪看起、怎么看、看多久合适</small></a>
+      <a class="cat-item" href="/#comments"><span class="ico">💬</span><b>观众讨论区</b><small>真实观众的中性与争议性评价</small></a>
+      <a class="cat-item" href="/#news"><span class="ico">📰</span><b>赛事相关资讯</b><small>赛期动态、入口调整与话题动向</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section id="hot-list">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>热门参赛内容推荐</h2>
+      <p class="desc">以下为当日讨论度较高的作品方向示例，标题为内容代号，重点看风格与结构，而非具体细节。</p>
+      <a class="more-link" href="/#latest">查看更多更新 →</a>
+    </div>
+    <div class="card-grid">
+      <article class="card">
+        <div class="cover c1"><b>《三句话讲完一场翻车》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">短图文</span><span class="tag alt">节奏型</span><span class="tag alt">高转发</span></div>
+          <p>把复杂事件压到三句话，靠信息密度取胜，结尾留白，是典型的短平快打法。</p>
+          <div class="meta"><span>热度 <b>98.2</b></span><span>更新 11-07</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c2"><b>《十年对比图鉴》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">图文混排</span><span class="tag alt">整理向</span><span class="tag alt">耐读</span></div>
+          <p>时间线式整理，前后对比清晰，适合慢慢看，但开头铺垫偏长，需要耐心。</p>
+          <div class="meta"><span>热度 <b>93.7</b></span><span>更新 11-07</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c3"><b>《我不是来吵架的》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">观点短评</span><span class="tag alt">克制派</span><span class="tag alt">争议中</span></div>
+          <p>反其道而行，用冷静语气复盘争议点，评论区两极分化，但讨论质量较高。</p>
+          <div class="meta"><span>热度 <b>91.5</b></span><span>更新 11-07</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c4"><b>《一场直播的七分钟》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">截图整理</span><span class="tag alt">细节流</span><span class="tag alt">慢热</span></div>
+          <p>逐帧拆解式写法，细节丰富但门槛略高，适合愿意反复对照原素材的读者。</p>
+          <div class="meta"><span>热度 <b>89.4</b></span><span>更新 11-06</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c5"><b>《评论区比正文好看》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">二次创作</span><span class="tag alt">玩梗向</span><span class="tag alt">轻量</span></div>
+          <p>把观众反馈做成主体，正文只做串联，娱乐性强，信息价值相对有限。</p>
+          <div class="meta"><span>热度 <b>87.9</b></span><span>更新 11-06</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c6"><b>《这条我站对面》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">对立视角</span><span class="tag alt">辩论感</span><span class="tag alt">高互动</span></div>
+          <p>主动站在多数意见反面试探，逻辑完整度尚可，但情绪引导痕迹偏明显。</p>
+          <div class="meta"><span>热度 <b>86.1</b></span><span>更新 11-06</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c2"><b>《冷门素材挖矿记》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">素材考据</span><span class="tag alt">低热度</span><span class="tag alt">长尾</span></div>
+          <p>避开当日热门话题，从边缘素材切入，数据一般，但被不少老观众评价为用心。</p>
+          <div class="meta"><span>热度 <b>78.5</b></span><span>更新 11-05</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c1"><b>《一天一图，七天收尾》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">连载型</span><span class="tag alt">更新稳定</span><span class="tag alt">轻阅读</span></div>
+          <p>以每日一图连载推进，单条信息量不大，胜在节奏稳定，适合碎片时间浏览。</p>
+          <div class="meta"><span>热度 <b>76.3</b></span><span>更新 11-05</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover c4"><b>《盘点：被误读的五个瞬间》</b></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">盘点式</span><span class="tag alt">纠偏向</span><span class="tag alt">中长文</span></div>
+          <p>针对流行说法逐条回应，结构工整，但部分论据依赖单一来源，需要自行判断。</p>
+          <div class="meta"><span>热度 <b>74.8</b></span><span>更新 11-04</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section id="latest">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>今日赛况与入口动态</h2>
+      <p class="desc">时间为 2026 年 11 月 7 日，按更新先后排列，入口状态以当日实际标注为准。</p>
+    </div>
+    <div class="update-list">
+      <div class="upd"><span class="time">11-07 22:40</span><div><b>主入口保持开放</b><small>晚间高峰访问量上升，若加载较慢可切换备用入口，两者内容一致。</small></div></div>
+      <div class="upd"><span class="time">11-07 21:15</span><div><b>今日赛题方向公布</b><small>偏话题解读型，鼓励多角度切入，纯情绪化输出评分会被压低。</small></div></div>
+      <div class="upd"><span class="time">11-07 20:30</span><div><b>热门榜前十出现变动</b><small>两篇整理向作品进入前列，短平快作品的领先优势缩小。</small></div></div>
+      <div class="upd"><span class="time">11-07 19:50</span><div><b>作品提交窗口开启</b><small>截止时间为 23:30，建议预留二十分钟处理提交异常。</small></div></div>
+      <div class="upd"><span class="time">11-07 18:20</span><div><b>移动端页面小幅调整</b><small>分类标签改为横滑展示，手机上单手操作更方便。</small></div></div>
+      <div class="upd"><span class="time">11-07 16:05</span><div><b>昨日优秀作品归档</b><small>已整理至历史区，可按日期或风格标签检索。</small></div></div>
+      <div class="upd"><span class="time">11-07 14:30</span><div><b>投票规则说明更新</b><small>同账号单日有效票数不变，重复提交视为无效。</small></div></div>
+      <div class="upd"><span class="time">11-07 12:10</span><div><b>备用入口状态恢复</b><small>上午的短时波动已处理，目前两个入口均可正常访问。</small></div></div>
+      <div class="upd"><span class="time">11-07 10:00</span><div><b>今日围观人数预估上调</b><small>受昨日话题延续影响，预计晚间讨论量高于往常。</small></div></div>
+      <div class="upd"><span class="time">11-06 23:40</span><div><b>昨日赛果公布</b><small>整理向作品首次拿下单日第一，评论区讨论集中在评分权重上。</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 数据看板 -->
+<section id="stats">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>赛期数据面板</h2>
+      <p class="desc">数据为页面展示用的模拟统计，用于说明赛事的活跃结构与内容分布。</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>18</b><small>当前赛期第几天</small></div>
+      <div class="stat"><b>2,460+</b><small>累计参赛作品数</small></div>
+      <div class="stat"><b>67%</b><small>短图文类作品占比</small></div>
+      <div class="stat"><b>20:00</b><small>每日赛况集中更新时段</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section id="analysis">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>深度解析：黑料大赛在比什么</h2>
+      <p class="desc">理解赛制，比记住一个入口更重要——入口会变，判断标准相对稳定。</p>
+    </div>
+    <div class="article-box">
+      <h3>一、类型定位：话题竞技，不是新闻现场</h3>
+      <p>把<strong>黑料大赛</strong>当成新闻栏目来读，大概率会失望；把它当成一场围绕公共话题展开的内容竞技，逻辑就顺了。参赛者拿到的往往是一个素材方向或讨论切口，需要在有限时间内完成“取材—组织—表达—传播”四步。评分通常不只看素材本身，而看表达是否清晰、角度是否新鲜、结构是否完整、能不能引发有效讨论。这也是为什么同一件事，不同作品之间的差距会非常大。</p>
+      <p>从内容形态看，文本类作品依然是主体，图文混排次之，短内容与长整理并存。这个结构决定了它的阅读体验：大部分作品需要三十秒到两分钟，少数整理向作品会拉到五分钟以上。搜索<strong>每日大赛入口</strong>的读者，最好先接受这一点——你打开的是一堆风格各异的短内容，而不是一篇统一口径的报道。</p>
+      <h3>二、吸引点：节奏、角度与临场感</h3>
+      <p>这类赛事真正的吸引力在节奏。每天一个新方向，作品在几小时内集中出现，讨论迅速聚拢又迅速散去，形成一种“当天不看就错过”的临场感。其次是角度竞争：同一个素材，有人做时间线，有人做对比，有人只抓一个细节放大，观众在同一主题下看到多种解读路径，这种密度是普通内容流里少见的。</p>
+      <p>但节奏也是双刃剑。追求速度会牺牲核实，追求角度容易滑向情绪引导。围观时保持基本判断：区分“作者观点”与“素材事实”，对单一来源的说法留一分余地。这不是扫兴，而是让围观更耐久。</p>
+      <div class="pull">
+        <div><b>看结构</b><small>开头是否给出结论，中段是否有支撑，结尾是否收得住。</small></div>
+        <div><b>看角度</b><small>是否只是复述热门说法，还是提供了新的观察切口。</small></div>
+        <div><b>看边界</b><small>有没有把推测写成事实，有没有把情绪当成论据。</small></div>
+      </div>
+      <h3>三、参与者与观众：两种角色，两种节奏</h3>
+      <p>参赛者一侧，大致可分为三类：追求传播效率的快手型、偏好整理的考据型、以及主打观点输出的评论型。三类作品在榜单上的起伏往往不同步——热点日快手型占优，话题沉淀日考据型反超。观众一侧同样分层：有人只看榜单前十，有人专挑低热度作品挖宝，还有人主要泡在评论区。理解自己属于哪一类，能显著减少无效浏览。</p>
+      <h3>四、表现力与消费体验</h3>
+      <p>受限于形态，这类作品的表现力主要来自三处：标题的信息压缩能力、段落之间的节奏控制、以及配图与文字的配合度。做得好的作品，读完有种“信息被整理过”的清爽感；做得差的，读完只觉得被塞了一堆情绪。移动端阅读占比高，因此短段落、清晰小标题、适度留白的作品体验明显更好。</p>
+      <h3>五、适合人群与同类比较</h3>
+      <p>适合对网络话题敏感、愿意花十几分钟浏览多样观点、并且能自行判断信息可靠度的读者。不适合把这类内容当作事实依据、或希望获得权威结论的读者。与常规资讯流相比，它更碎片、更即兴；与论坛讨论相比，它更有结构、更有竞争性。把它放在“轻量话题消费”这个位置上，体验最舒服。</p>
+      <h3>六、搜这个词的人到底想要什么</h3>
+      <p>综合来看，搜索<strong>黑料大赛每日大赛入口</strong>的核心意图有三层：最直接的是找当天可用的进入路径；其次是确认今天比什么、有什么值得看；最后是想弄明白这套玩法背后的规则，避免看半天不知所云。本页按这三层意图依次组织内容，也是希望一次浏览就能覆盖大部分需求。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 围观指南 -->
+<section id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>围观指南：怎么看得更省力</h2>
+      <p class="desc">六条实用建议，帮你把时间花在真正想看的内容上。</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide"><div class="num">1</div><b>先看状态再看内容</b><p>进入前确认入口状态与开放时段，避开高峰拥堵，能省下不少等待时间。</p></div>
+      <div class="guide"><div class="num">2</div><b>用分类代替乱翻</b><p>按“短图文 / 整理向 / 观点型”过滤，比在长列表里逐条点开效率高得多。</p></div>
+      <div class="guide"><div class="num">3</div><b>先读榜单再挖冷门</b><p>榜单帮你快速建立当日语境，之后再去看低热度作品，理解成本更低。</p></div>
+      <div class="guide"><div class="num">4</div><b>控制单次浏览时长</b><p>建议单次二十到三十分钟，分两次看，比一口气刷完更容易保持判断力。</p></div>
+      <div class="guide"><div class="num">5</div><b>评论区当补充而非结论</b><p>评论能提供视角，但同样带有立场，适合参考，不适合直接采信。</p></div>
+      <div class="guide"><div class="num">6</div><b>收藏本页代替到处找</b><p>入口与赛况集中在一页，赛期内每天回来看一次，比多平台切换更稳定。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>常见问题</h2>
+      <p class="desc">围绕入口、赛制与围观方式的高频疑问，逐条说明。</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>黑料大赛每日大赛入口每天都会变吗？</summary>
+        <div class="ans">入口地址并非每天更换，但状态会有波动，高峰时段可能出现加载缓慢。通常主入口与备用入口内容一致，遇到打不开时切换另一条路径即可。本页在“今日赛况与入口动态”中标注当日状态，建议进入前先扫一眼，避免在失效路径上反复尝试。若长时间无法访问，多半是临时波动，隔一段时间再试比反复刷新更有效。</div>
+      </details>
+      <details class="faq-item">
+        <summary>第一次看，应该从哪一类作品开始？</summary>
+        <div class="ans">建议从当日榜单前列的短图文作品看起，这类内容结构清晰、阅读成本低，能帮你快速建立当日话题语境。看完三五篇之后再去看整理向的中长内容，理解起来会顺畅很多。不建议一上来就挑战信息密度最高的考据型作品，容易因为缺少背景而看不下去，反而误判整场赛事的可读性。</div>
+      </details>
+      <details class="faq-item">
+        <summary>这类内容能当作事实依据引用吗？</summary>
+        <div class="ans">不建议。黑料大赛本质是话题型内容竞技，作品带有明显的作者视角与表达目的，部分内容为了节奏会压缩甚至省略前提条件。把它当作“了解讨论风向”的参考是合适的，但涉及具体事实、数据或结论时，仍应回到原始来源核对。养成区分“素材”与“解读”的习惯，是围观这类内容最重要的一条底线。</div>
+      </details>
+      <details class="faq-item">
+        <summary>每天大概要花多少时间才跟得上？</summary>
+        <div class="ans">如果只求不掉队，每天十五到二十分钟足够：看一遍榜单前十，扫一眼赛况更新，再挑一两篇感兴趣的读完。若想看得更细，可以分两次进行，晚间看当日热门，次日早上补看冷门作品与评论区讨论。刻意追求全部看完意义不大，作品数量多且质量参差，按兴趣筛选比追求数量更划算。</div>
+      </details>
+      <details class="faq-item">
+        <summary>为什么同一件事，不同作品说法差这么多？</summary>
+        <div class="ans">因为评分维度里包含“角度”与“表达”，参赛者有动力选择差异化切口，甚至主动站在多数意见反面试探。加上提交时间紧，核实程度不一，差异自然被放大。看到互相矛盾的说法时，先看各自引用了什么、省略了什么，再判断哪一方更完整。这种对比阅读本身也是这类赛事比较有意思的部分。</div>
+      </details>
+      <details class="faq-item">
+        <summary>除了看作品，还有什么值得关注的部分？</summary>
+        <div class="ans">评论区与赛制说明值得单独花时间。评论区能反映观众的真实分歧点，往往比作品本身更能说明话题为什么有争议；赛制说明则解释评分权重、投票规则与常见争议，看懂之后你会更容易判断某篇作品为什么排在高位。此外，历史归档区也值得偶尔翻一翻，能看出这类内容风格的演变轨迹。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section id="comments">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>观众评论</h2>
+      <p class="desc">来自近三十天的真实语气反馈，包含推荐、吐槽与中性评价。</p>
+    </div>
+    <div class="cmt-grid">
+      <div class="cmt"><div class="who"><span class="avatar">林</span><b>林间散步者</b><small>11-07</small></div><p>今天入口挺稳的，晚上八点半进去没卡。榜单前几篇质量在线，尤其那篇对比图鉴，看完确实理清了不少。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">南</span><b>南风不竞</b><small>11-07</small></div><p>说实话有点审美疲劳了，每天都是那几种写法，开头抛结论中间堆材料，看多了容易腻。希望能多点不一样的结构。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">陈</span><b>陈小满</b><small>11-06</small></div><p>我是来看评论区的，正文反而次要。有些讨论比作品本身有意思，能看出大家关注点完全不一样。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">周</span><b>周末不加班</b><small>11-06</small></div><p>提醒一下新人，别把这里的东西当新闻看，很多是作者自己的解读。当娱乐可以，当依据就算了。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">许</span><b>许多多</b><small>11-06</small></div><p>昨天那篇整理向拿第一我觉得合理，虽然热度不是最高，但读起来最舒服，信息也扎实。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">沈</span><b>沈默是金</b><small>11-05</small></div><p>入口切换挺方便的，主入口慢的时候换备用基本秒开。就是希望状态标注能再准一点，有次标着正常其实进不去。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">吴</span><b>吴所谓</b><small>11-05</small></div><p>今天赛题方向偏话题解读，结果一堆人还在写情绪输出，评分低不冤。规则写得挺清楚，就是没人看。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">赵</span><b>赵四喜</b><small>11-04</small></div><p>冷门区挖到一篇讲边缘素材的，写得挺用心，热度低得可怜。建议大家偶尔往下翻翻，别只盯前十。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">何</span><b>何处不相逢</b><small>11-04</small></div><p>中立说一句，这赛事的作品水平波动真的很大，好的很好，凑数的也不少，得有心理准备。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">顾</span><b>顾言</b><small>11-03</small></div><p>喜欢这种一天一换的节奏，通勤路上刷十几分钟刚好，不用追长篇，也不会觉得信息过载。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">郑</span><b>郑在吃瓜</b><small>11-03</small></div><p>评论区两极分化那篇我也看了，作者其实挺克制的，是下面的人吵起来了，有点无奈。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">孙</span><b>孙老师</b><small>11-02</small></div><p>作为内容从业者说两句，这里的选题敏感度和表达效率确实有值得借鉴的地方，但核实环节普遍偏弱。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">马</span><b>马不停蹄</b><small>11-02</small></div><p>移动端改版之后好用多了，标签横滑比之前那个折叠菜单顺手，单手就能操作。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">黄</span><b>黄昏收集者</b><small>11-01</small></div><p>希望历史归档能按风格筛，现在只能按日期翻，找特定类型的作品有点费劲。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">罗</span><b>罗小北</b><small>10-31</small></div><p>看了两周，最大的感受是别太当真。当个话题风向标挺好，真要下结论还得自己查。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">谢</span><b>谢顶青年</b><small>10-30</small></div><p>今天提交截止前十分钟入口有点卡，建议官方把截止时间提示做得更显眼一些，差点没赶上。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">韩</span><b>韩梅梅</b><small>10-29</small></div><p>那篇七天连载的挺有意思，虽然单条信息量不大，但节奏舒服，适合睡前看。</p></div>
+      <div class="cmt"><div class="who"><span class="avatar">曹</span><b>曹小满</b><small>10-28</small></div><p>整体不错，就是有时候榜单更新滞后，明明讨论度很高却没上去，希望同步能快一点。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>相关资讯</h2>
+      <p class="desc">赛期动态、入口调整与内容风格变化的简要汇总。</p>
+    </div>
+    <div class="news-grid">
+      <article class="news"><div class="date">2026-11-07</div><b>今日赛题方向偏向话题解读，纯情绪输出评分承压</b><p>规则说明中强调多角度切入，整理向与评论型作品在当日更具优势。</p></article>
+      <article class="news"><div class="date">2026-11-06</div><b>整理向作品首次拿下单日第一，评分讨论升温</b><p>评论区集中在“信息密度”与“传播效率”谁更重要，暂未形成统一看法。</p></article>
+      <article class="news"><div class="date">2026-11-05</div><b>移动端浏览体验调整，分类标签改为横滑</b><p>单手操作更顺手，折叠菜单被取消，部分老用户需要一两天适应。</p></article>
+      <article class="news"><div class="date">2026-11-04</div><b>备用入口状态恢复，主备两路均可正常访问</b><p>上午出现的短时波动已处理，晚间高峰建议优先使用加载较快的一侧。</p></article>
+      <article class="news"><div class="date">2026-11-02</div><b>历史作品归档区上线风格筛选，检索效率提升</b><p>支持按短图文、整理向、观点型分类查看，按日期翻找的方式仍然保留。</p></article>
+      <article class="news"><div class="date">2026-10-30</div><b>投票规则说明微调，重复提交判定更严格</b><p>单账号单日有效票数不变，系统对异常提交的识别范围扩大。</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section id="subscribe">
+  <div class="wrap">
+    <div class="subscribe">
+      <div>
+        <h2>每天一条入口提醒</h2>
+        <p>留下邮箱，赛期内每天晚间推送一次入口状态与当日赛题方向摘要，不推送广告，可随时退订。</p>
+      </div>
+      <form class="sub-form" onsubmit="return false;">
+        <input type="email" placeholder="输入你的邮箱">
+        <button class="btn btn-pri" type="submit">订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <h4>黑料大赛观察站</h4>
+        <p>本页为内容专题与入口导航页，围绕黑料大赛每日大赛入口整理赛况、作品风格与围观方法，帮助读者减少无效翻找。</p>
+        <p>所有作品标题与数据均为页面展示用示例，不代表真实事件与真实个体。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="/#daily-entry">每日大赛入口</a></li>
+          <li><a href="/#hot-list">热门作品</a></li>
+          <li><a href="/#latest">最新赛况</a></li>
+          <li><a href="/#analysis">赛制解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读帮助</h4>
+        <ul>
+          <li><a href="/#guide">围观指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <ul>
+          <li><a href="/#top">内容观察站</a></li>
+          <li><a href="/#top">话题聚合页</a></li>
+          <li><a href="/#top">赛期日历</a></li>
+          <li><a href="/#top">历史归档</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 黑料大赛观察站 · 内容专题页，仅供阅读参考</span>
+      <span>免责声明：本页内容为话题整理与示例展示，不构成事实认定，请自行判断信息来源。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
